@@ -6,7 +6,7 @@ function login() {
     }
     else {
         
-    if (uname == "nidhi" && password == "nidhioplol41") {
+    if (uname == "5" && password == "7") {
         localStorage.setItem('premium','yes')
         localStorage.setItem('name',"(Founder) Ritika Tripathi")
         localStorage.setItem('password',password)
