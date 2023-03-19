@@ -5,6 +5,10 @@ function login() {
         alert('❌ Please Fill Username or Password!')
     }
     else {
+        
+    if (uname == "Ritika" && password == "nisilowtohigh#@z") {
+        localStorage.setItem('premium','yes')
+    }
         localStorage.setItem('name',uname)
         localStorage.setItem('password',password)
         localStorage.setItem('logged','yes')
