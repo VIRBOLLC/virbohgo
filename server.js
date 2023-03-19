@@ -6,13 +6,19 @@ function login() {
     }
     else {
         
-    if (uname == "Ritika" && password == "nisilowtohigh#@z") {
+    if (uname == "nidhi" && password == "nidhioplol41") {
         localStorage.setItem('premium','yes')
+        localStorage.setItem('name',"(Founder) Ritika Tripathi")
+        localStorage.setItem('password',password)
+        localStorage.setItem('logged','yes')
+        window.location.replace('homepage.html')
     }
+       else{
         localStorage.setItem('name',uname)
         localStorage.setItem('password',password)
         localStorage.setItem('logged','yes')
         window.location.replace('homepage.html')
+    }
     }
 }
 if (localStorage.getItem('logged')=='yes') {
