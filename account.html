@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <title>Virbo</title>
+</head>
+<body>
+    <div class="box-outer-wrap">
+        <div class="box-outer">
+            <div class="box-inner-wrap">
+                <div class="box-inner">
+                    <div class="profile-pic-wrap">
+                        <div class="profile-pic"></div>
+                    </div>
+                    <h3 class="name" id="name"></h3>
+                    <div class="details">
+                        <span class="fa fa-map-marker fa-fw"></span><span class="location">Student</span> <br>
+                        <span class="fa fa-map-marker fa-fw"></span><span class="location">Free</span>
+                        <div class="btn-wrap">
+                            <button type="button" class="btn-default" onclick="localStorage.setItem('logged','no');window.location.replace('index.html')"><i class='bx bx-log-out'></i> Logout</button>
+                        </div>
+                
+                    </div>
+                    <div class="stats">
+                        <div class="col col-xs-4">
+                            <p class="stat-heading views">Favourites</p>
+                            <p class="stat-value" id="favourites">0</p>
+                        </div>
+                        <div class="col col-xs-4">
+                            <p class="stat-heading views"></p>
+                            <p class="stat-value" id="favourites"></p>
+                        </div>
+                        <div class="col col-xs-4">
+                            <p class="stat-heading views">Premium</p>
+                            <p class="stat-value" id="favourites">No</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="handler.js"></script>
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Raleway:400,700);
+ @import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+ @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+ body {
+	 font-family: Raleway;
+	 background: #e9e8e6;
+}
+ .box-outer-wrap {
+	 position: absolute;
+	 width: 350px;
+	 height: 600px;
+	 top: 50%;
+	 left: 50%;
+	 transform: translate(-50%, -50%);
+	 box-shadow: 0px 1px 30px 3px rgba(0, 0, 0, 0.4);
+}
+ .box-outer-wrap .box-outer {
+	 position: relative;
+	 width: 100%;
+	 height: 100%;
+	 background: url(https://th.bing.com/th/id/OIP.CVVEatEUJz4eyBuNuKACaQHaNK?pid=ImgDet&rs=1);
+	 background-position: 40% 0%;
+	 background-repeat: no-repeat;
+	 background-size: 115%;
+	 -webkit-transform: translate3d(0, 0, 0);
+}
+ .box-outer-wrap .box-outer .box-inner-wrap {
+	 position: absolute;
+	 width: 100%;
+	 height: 40%;
+	 bottom: 0;
+	 left: 50%;
+	 transform: translateX(-50%);
+	 background-color: transparent;
+	 padding: 0.75em;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner {
+	 position: relative;
+	 width: 100%;
+	 height: 100%;
+	 padding: 1em 1em 1em 1em;
+	 background: #fff;
+	 box-shadow: 0px 1px 10x 3px rgba(0, 0, 0, 0.8);
+	/* Opera */
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .profile-pic-wrap {
+	 position: absolute;
+	 bottom: 100%;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .profile-pic-wrap .profile-pic {
+	 width: 70px;
+	 height: 70px;
+	 margin-bottom: -50%;
+	 border-radius: 50%;
+	 background: url(https://wallpapercave.com/wp/wp6819595.jpg);
+	 background-size: 170%;
+	 background-repeat: no-repeat;
+	 background-position: 70% 0%;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .name {
+	 margin-top: 1.5em;
+	 font-size: 1.5em;
+	 transform: scale(1, 1.1);
+	 -webkit-transform: scale(1, 1.1);
+	/* W3C */
+	 -moz-transform: scale(1, 1.1);
+	/* Safari and Chrome */
+	 -ms-transform: scale(1, 1.1);
+	/* Firefox */
+	 -o-transform: scale(1, 1.1);
+	/* IE 9 */
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details {
+	 position: relative;
+	 width: 100%;
+	 height: 25%;
+	 margin-bottom: 1.8em;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details .fa {
+	 color: #999;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details .occupation, .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details .location {
+	 font-weight: 700;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details span {
+	 font-size: 0.7em;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details .btn-wrap {
+	 position: absolute;
+	 width: 30%;
+	 height: 80%;
+	 top: 50%;
+	 right: 0;
+	 transform: translateY(-50%);
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .details .btn-wrap .btn-default {
+	 width: 100%;
+	 height: 100%;
+	 color: #fff;
+	 background: #111;
+	 border: 0;
+	 border-radius: 8px;
+	 font-size: 0.8em;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .stats .stat-heading {
+	 font-size: 0.6em;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .stats .stat-value {
+	 font-size: 1.8em;
+	 font-family: Roboto;
+}
+ .box-outer-wrap .box-outer .box-inner-wrap .box-inner .stats p {
+	 text-align: center;
+	 line-height: 65%;
+}
+ 
+</style>
+</body>
+</html>
