@@ -50,16 +50,8 @@ ${localStorage.getItem('js')}
 localStorage.setItem('code',code)
 })
 document.querySelector('#inputhtml').innerHTML = `
-<!DOCTYPEhtml>
-<html>
-<head>
-<title> ${localStorage.getItem('name')}'s Cool website! </title>
-</head>
-<body>
-<h1> Hello world! </h1>
-<button onclick='alert("HI!")'>Click me to say hi!</button>
-</body>
-</html>
+<h1> ${localStorage.getItem('name')}'s Cool website!</h1>
+<button onclick='alert("hello "+"${localStorage.getItem('name')}")'>Click me to say hi!</button>
 `
 document.querySelector('#inputcss').innerHTML = `
 body {
@@ -68,5 +60,5 @@ body {
 }
 `
 document.querySelector('#inputjs').innerHTML = `
-alert('HI!')
+// Javascript here
 `
